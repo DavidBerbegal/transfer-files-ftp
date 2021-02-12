@@ -1,10 +1,10 @@
 @echo off
-echo user david> ftpcmd.dat
-echo 1234>> ftpcmd.dat
+echo user MyUserName> ftpcmd.dat
+echo MyPassword>> ftpcmd.dat
 echo bin>> ftpcmd.dat
-echo put david.txt>> ftpcmd.dat
+echo put FileName.txt>> ftpcmd.dat
 echo quit>> ftpcmd.dat
-ftp -n -s:ftpcmd.dat 192.168.1.250
+ftp -n -s:ftpcmd.dat ServerName
 del ftpcmd.dat
-msg * Transferencia completada!
+msg * Transfer done
 
